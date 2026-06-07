@@ -10,16 +10,18 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cerulean to-pacific flex items-center justify-center">
-                <span className="text-white font-bold text-sm font-mono">&lt;/&gt;</span>
-              </div>
+              <img
+                src="/logo.png"
+                alt="DevStart Logo"
+                className="w-8 h-8 object-contain rounded-lg"
+              />
               <span className="text-lg font-bold text-yale-dark">
-                Start<span className="text-cerulean">Dev</span>
+                Dev<span className="text-cerulean">Start</span>
               </span>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed max-w-sm mb-6">
@@ -91,13 +93,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               <li className="text-slate-500 text-sm">
-                WhatsApp: +62 812 3456 7890
+                Email: hello@devstart.id
               </li>
               <li className="text-slate-500 text-sm">
-                Email: hello@startdev.id
-              </li>
-              <li className="text-slate-500 text-sm">
-                Instagram: @startdev.id
+                Instagram: @devstart.id
               </li>
             </ul>
           </div>
@@ -106,7 +105,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-400 text-sm">
-            © 2026 StartDev. Belajar, Membangun, dan Publish.
+            © 2026 DevStart.
           </p>
           <button
             onClick={scrollToTop}

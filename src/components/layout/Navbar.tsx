@@ -60,7 +60,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[4.5rem]">
+      <nav className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-[4.5rem]">
         {/* Logo */}
         <a
           href="#beranda"
@@ -69,11 +69,13 @@ export default function Navbar() {
             scrolled ? 'scale-95' : 'scale-100'
           }`}
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cerulean to-pacific flex items-center justify-center">
-            <span className="text-white font-bold text-sm font-mono">&lt;/&gt;</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="DevStart Logo"
+            className="w-8 h-8 object-contain rounded-lg"
+          />
           <span className={`text-lg font-bold transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-            Start<span className="text-pacific">Dev</span>
+            Dev<span className="text-pacific">Start</span>
           </span>
         </a>
 
