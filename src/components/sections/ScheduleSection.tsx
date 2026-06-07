@@ -18,9 +18,9 @@ export default function ScheduleSection() {
   ];
 
   return (
-    <section className="section-alt section-padding relative overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Jadwal & Fasilitas"
           title="Informasi Kelas"

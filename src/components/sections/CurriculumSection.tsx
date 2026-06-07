@@ -21,11 +21,11 @@ export default function CurriculumSection() {
   return (
     <section id="materi" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Kurikulum"
           title="Materi yang Akan Dipelajari"
-          description="12 modul yang disusun secara progresif untuk membangun pemahaman dan kemampuan dari dasar."
+          description="12 materi yang disusun secara progresif untuk membangun pemahaman dan kemampuan dari dasar."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">

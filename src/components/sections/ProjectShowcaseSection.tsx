@@ -11,7 +11,7 @@ export default function ProjectShowcaseSection() {
   return (
     <section id="hasil-karya" className="section-alt section-padding relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left – content */}
           <div className="space-y-8">

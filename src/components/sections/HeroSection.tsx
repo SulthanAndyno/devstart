@@ -95,7 +95,7 @@ export default function HeroSection() {
       <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-pacific/10 blur-[120px]" />
       <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] rounded-full bg-pacific/5 blur-[100px]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-20 w-full">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 md:pt-28 md:pb-16 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left content */}
           <div className="space-y-8">
@@ -181,7 +181,7 @@ export default function HeroSection() {
                 <div className="browser-dot browser-dot-yellow" />
                 <div className="browser-dot browser-dot-green" />
                 <div className="browser-url !bg-[#2d2d2d] !border-[#3e3e3e] !text-[#cccccc]">
-                  startdev.id/portfolio
+                  devstart.id/portfolio
                 </div>
               </div>
 

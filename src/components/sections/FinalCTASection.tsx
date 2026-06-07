@@ -12,7 +12,7 @@ export default function FinalCTASection() {
       {/* Decorative glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] rounded-full bg-cerulean/10 blur-[120px]" />
 
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div data-reveal className="max-w-3xl mx-auto bg-charcoal border border-white/10 rounded-2xl p-10 md:p-14 text-center shadow-2xl shadow-slate-950/20">
           <h2
             data-reveal
@@ -25,7 +25,7 @@ export default function FinalCTASection() {
             className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-8"
           >
             Jangan hanya menyimpan ide. Pelajari cara membangunnya menjadi
-            website nyata bersama StartDev.
+            website nyata bersama DevStart.
           </p>
 
           <a

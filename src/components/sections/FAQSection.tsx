@@ -17,7 +17,7 @@ export default function FAQSection() {
   return (
     <section id="faq" className="section-alt section-padding relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="FAQ"
           title="Pertanyaan yang Sering Diajukan"

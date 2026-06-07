@@ -7,6 +7,7 @@ import {
   Globe,
   FolderOpen,
   ArrowRight,
+  LifeBuoy,
 } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -18,6 +19,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   PuzzleIcon: Puzzle,
   Globe,
   FolderOpen,
+  LifeBuoy,
 };
 
 export default function ProblemSection() {
@@ -26,9 +28,9 @@ export default function ProblemSection() {
   return (
     <section id="masalah" className="section-alt section-padding relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Kenapa StartDev?"
+          badge="Kenapa DevStart?"
           title="Belajar Coding Sering Terasa Membingungkan?"
         />
 
@@ -64,7 +66,7 @@ export default function ProblemSection() {
             SOLUSI
           </div>
           <p className="text-slate-800 text-lg md:text-xl font-medium leading-relaxed">
-            Website Zero to Hero memberikan jalur belajar yang terstruktur, mulai
+            Kursus Website Zero to Hero memberikan jalur belajar yang terstruktur, mulai
             dari mengenal HTML sampai website berhasil dipublikasikan.
           </p>
         </div>

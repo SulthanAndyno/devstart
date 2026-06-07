@@ -16,7 +16,8 @@ import {
 
 export default function RegistrationSection() {
   const containerRef = useScrollReveal();
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const {
     register,
@@ -32,25 +33,71 @@ export default function RegistrationSection() {
 
   const onSubmit = async (data: RegistrationSchema) => {
     setStatus('loading');
+    setErrorMessage('');
 
-    // Short delay for loading state
-    await new Promise((r) => setTimeout(r, 800));
+    try {
+      const formspreeFormId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
 
-    setStatus('success');
+      if (!formspreeFormId) {
+        console.warn('Formspree Form ID is not set. Redirecting directly to WhatsApp.');
+        setStatus('success');
+        setTimeout(() => {
+          const message = buildWhatsAppMessage(data);
+          openWhatsApp(message);
+          reset();
+          setStatus('idle');
+        }, 1200);
+        return;
+      }
 
-    // Build and open WhatsApp after brief success state
-    setTimeout(() => {
-      const message = buildWhatsAppMessage(data);
-      openWhatsApp(message);
-      reset();
-      setStatus('idle');
-    }, 1500);
+      const response = await fetch(`https://formspree.io/f/${formspreeFormId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          'Nama Lengkap': data.fullName,
+          'Email': data.email,
+          'WhatsApp': data.whatsapp,
+          'Pilihan Kelas': data.course,
+          'Batch': data.batch,
+          'Pengalaman Coding': data.experience,
+          'Tujuan': data.goal,
+          'Catatan': data.notes || '-',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Gagal mengirim data pendaftaran.');
+      }
+
+      setStatus('success');
+
+      setTimeout(() => {
+        const message = buildWhatsAppMessage(data);
+        openWhatsApp(message);
+        reset();
+        setStatus('idle');
+      }, 1500);
+    } catch (err: any) {
+      console.error('Formspree submit error:', err);
+      setStatus('error');
+      setErrorMessage('Terjadi kendala server pendaftaran.');
+
+      setTimeout(() => {
+        const message = buildWhatsAppMessage(data);
+        openWhatsApp(message);
+        reset();
+        setStatus('idle');
+      }, 2500);
+    }
   };
 
   return (
     <section id="pendaftaran" className="bg-cream-dark section-padding relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      <div ref={containerRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Pendaftaran"
           title="Daftar Kelas Sekarang"
@@ -59,11 +106,18 @@ export default function RegistrationSection() {
 
         <div className="max-w-2xl mx-auto" data-reveal>
           <div className="glass-card p-6 md:p-10">
-            {/* Toast */}
+            {/* Toasts */}
             {status === 'success' && (
               <div className="toast toast-success flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-pacific" />
                 <span>Pendaftaran berhasil! Mengarahkan ke WhatsApp...</span>
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="toast bg-white border border-rose-500 text-rose-700 shadow-xl flex items-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse" />
+                <span>{errorMessage} Mengalihkan ke WhatsApp...</span>
               </div>
             )}
 
