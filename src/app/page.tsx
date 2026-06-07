@@ -8,7 +8,6 @@ import CurriculumSection from '@/components/sections/CurriculumSection';
 import ProjectShowcaseSection from '@/components/sections/ProjectShowcaseSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import TargetStudentSection from '@/components/sections/TargetStudentSection';
-import InstructorSection from '@/components/sections/InstructorSection';
 import ScheduleSection from '@/components/sections/ScheduleSection';
 import RegistrationSection from '@/components/sections/RegistrationSection';
 import FAQSection from '@/components/sections/FAQSection';
@@ -27,7 +26,6 @@ export default function Home() {
         <ProjectShowcaseSection />
         <BenefitsSection />
         <TargetStudentSection />
-        <InstructorSection />
         <ScheduleSection />
         <RegistrationSection />
         <FAQSection />
