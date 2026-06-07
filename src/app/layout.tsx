@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'StartDev — Belajar Membuat Website dari Nol Sampai Online',
+  title: 'DevStart — Belajar Membuat Website dari Nol Sampai Online',
   description:
     'Kursus pemula untuk belajar membuat website menggunakan HTML, CSS, dan JavaScript. Mulai dari nol hingga website pertamamu online. Project-based learning dengan live mentoring.',
   keywords: [
@@ -24,22 +24,22 @@ export const metadata: Metadata = {
     'belajar HTML CSS JavaScript',
     'membuat website dari nol',
     'kelas web development Indonesia',
-    'StartDev',
+    'DevStart',
     'cara membuat website',
     'kursus web developer jakarta',
     'coding online indonesia'
   ],
   alternates: {
-    canonical: 'https://startdev.id',
+    canonical: 'https://devstart.id',
   },
   openGraph: {
-    title: 'StartDev — Belajar Membuat Website dari Nol Sampai Online',
+    title: 'DevStart — Belajar Membuat Website dari Nol Sampai Online',
     description:
       'Pelajari HTML, CSS, dan JavaScript melalui project nyata. Cocok untuk pemula yang ingin memiliki website portfolio.',
     type: 'website',
     locale: 'id_ID',
-    url: 'https://startdev.id',
-    siteName: 'StartDev',
+    url: 'https://devstart.id',
+    siteName: 'DevStart',
   },
 };
 
@@ -58,12 +58,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Course",
-              "name": "StartDev — Belajar Membuat Website dari Nol Sampai Online",
+              "name": "DevStart — Belajar Membuat Website dari Nol Sampai Online",
               "description": "Kursus pemula untuk belajar membuat website menggunakan HTML, CSS, dan JavaScript. Mulai dari nol hingga website pertamamu online.",
               "provider": {
                 "@type": "Organization",
-                "name": "StartDev",
-                "sameAs": "https://startdev.id"
+                "name": "DevStart",
+                "sameAs": "https://devstart.id"
               },
               "offers": {
                 "@type": "Offer",
