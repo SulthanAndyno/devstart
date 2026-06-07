@@ -1,4 +1,4 @@
-export const SITE_NAME = 'StartDev';
+export const SITE_NAME = 'DevStart';
 export const SITE_DESCRIPTION = 'Kursus pemula untuk belajar membuat website menggunakan HTML, CSS, dan JavaScript. Mulai dari nol hingga website pertamamu online.';
 export const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890';
 
@@ -11,10 +11,10 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO_BADGES = [
-  { icon: 'Users', label: 'Pemula Friendly' },
+  { icon: 'Users', label: 'Beginner Friendly' },
   { icon: 'FolderGit2', label: 'Project Based' },
   { icon: 'Video', label: 'Live Mentoring' },
-  { icon: 'Briefcase', label: 'Portfolio Ready' },
+  { icon: 'Briefcase', label: 'Portfolio Project' },
 ] as const;
 
 export const PROBLEMS = [
@@ -43,12 +43,17 @@ export const PROBLEMS = [
     title: 'Belum memiliki portfolio untuk ditampilkan',
     description: 'Ingin melamar kerja atau freelance tetapi belum memiliki hasil karya yang bisa ditunjukkan.',
   },
+  {
+    icon: 'LifeBuoy',
+    title: 'Tidak ada mentor untuk bertanya',
+    description: 'Bingung mencari jalan keluar ketika menemukan error atau stuck saat menulis kode.',
+  },
 ] as const;
 
 export const COURSE_INFO = {
   name: 'Website Zero to Hero',
   technologies: ['HTML', 'CSS', 'JavaScript'],
-  level: 'Pemula',
+  level: 'Beginner',
   method: 'Project Based Learning',
   output: 'Website portfolio yang sudah online',
   features: [
@@ -57,7 +62,6 @@ export const COURSE_INFO = {
     'Membangun satu project utama',
     'Review hasil project',
     'Panduan deployment',
-    'Sertifikat penyelesaian',
   ],
 } as const;
 
@@ -93,7 +97,7 @@ export const LEARNING_JOURNEY = [
   {
     phase: 5,
     title: 'Publish Your Website',
-    topics: ['Git dan GitHub dasar', 'Menyimpan project ke repository', 'Deployment', 'Custom domain (materi tambahan)'],
+    topics: ['Git dan GitHub dasar', 'Menyimpan project ke repository', 'Deployment'],
     output: 'Website dapat dibuka secara online dan dibagikan kepada orang lain.',
     icon: 'Rocket',
   },
@@ -171,7 +175,7 @@ export const TARGET_STUDENTS = [
 ] as const;
 
 export const INSTRUCTOR = {
-  name: 'Mentor StartDev',
+  name: 'Mentor DevStart',
   position: 'Web Developer & Instructor',
   experience: 'Berpengalaman dalam pengembangan web dan mengajar pemula untuk memahami coding dari dasar.',
   focus: 'Fokus pada pengajaran yang praktis, terstruktur, dan berorientasi pada project nyata.',
@@ -181,9 +185,9 @@ export const INSTRUCTOR = {
 
 export const SCHEDULE = {
   course: 'Website Zero to Hero',
-  duration: '8 Pertemuan',
-  level: 'Pemula',
-  method: 'Online Live Class',
+  duration: '5 Pertemuan',
+  level: 'Beginner',
+  method: 'Hybrid Class',
   capacity: 'Terbatas',
 } as const;
 
@@ -195,7 +199,6 @@ export const FACILITIES = [
   'Mentoring',
   'Review project',
   'Panduan deployment',
-  'Sertifikat',
 ] as const;
 
 export const FAQ_DATA = [
@@ -237,7 +240,7 @@ export const FAQ_DATA = [
   },
   {
     question: 'Apakah ada sertifikat?',
-    answer: 'Ya, peserta yang menyelesaikan seluruh materi dan project akan mendapatkan sertifikat penyelesaian dari StartDev.',
+    answer: 'Ya, peserta yang menyelesaikan seluruh materi dan project akan mendapatkan sertifikat penyelesaian dari DevStart.',
   },
 ] as const;
 
@@ -254,8 +257,8 @@ export const BATCH_OPTIONS = [
 ] as const;
 
 export const STATS = [
-  { value: 12, suffix: '+', label: 'Modul Materi' },
-  { value: 8, suffix: '', label: 'Pertemuan' },
+  { value: 3, suffix: '+', label: 'Modul Materi' },
+  { value: 5, suffix: '', label: 'Pertemuan' },
   { value: 3, suffix: '+', label: 'Project Portfolio' },
   { value: 100, suffix: '%', label: 'Praktik Langsung' },
 ] as const;
