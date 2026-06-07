@@ -53,12 +53,12 @@ export default function ProjectShowcaseSection() {
           <div className="space-y-6">
             {PROJECT_SHOWCASES.map((project) => (
               <div key={project.id} data-reveal className="group">
-                <div className="browser-mockup overflow-hidden glass-card-hover">
-                  <div className="browser-toolbar">
+                <div className="browser-mockup !bg-[#1e1e1e] !border-[#2d2d2d] overflow-hidden glass-card-hover">
+                  <div className="browser-toolbar !bg-[#252526] !border-b-[#1e1e1e]">
                     <div className="browser-dot browser-dot-red" />
                     <div className="browser-dot browser-dot-yellow" />
                     <div className="browser-dot browser-dot-green" />
-                    <div className="browser-url">
+                    <div className="browser-url !bg-[#2d2d2d] !border-[#3e3e3e] !text-[#cccccc]">
                       {project.title.toLowerCase().replace(/\s/g, '-')}.vercel.app
                     </div>
                   </div>
