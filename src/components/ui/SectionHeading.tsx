@@ -14,7 +14,7 @@ export default function SectionHeading({
   centered = true,
 }: SectionHeadingProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${centered ? 'text-center' : ''}`}>
+    <div className={`mb-8 md:mb-10 ${centered ? 'text-center' : ''}`}>
       {badge && (
         <span
           data-reveal
