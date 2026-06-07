@@ -7,6 +7,8 @@ export const registrationSchema = z.object({
     .max(100, 'Nama lengkap maksimal 100 karakter'),
   email: z
     .string()
+    .trim()
+    .toLowerCase()
     .email('Format email tidak valid'),
   whatsapp: z
     .string()
