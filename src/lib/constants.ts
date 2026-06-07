@@ -238,10 +238,6 @@ export const FAQ_DATA = [
     question: 'Apakah tersedia konsultasi setelah kelas?',
     answer: 'Ya, peserta tetap bisa bertanya dan berdiskusi di grup komunitas setelah kelas selesai. Untuk konsultasi personal, bisa diatur sesuai ketersediaan mentor.',
   },
-  {
-    question: 'Apakah ada sertifikat?',
-    answer: 'Ya, peserta yang menyelesaikan seluruh materi dan project akan mendapatkan sertifikat penyelesaian dari DevStart.',
-  },
 ] as const;
 
 export const CODING_EXPERIENCE_OPTIONS = [
@@ -257,7 +253,7 @@ export const BATCH_OPTIONS = [
 ] as const;
 
 export const STATS = [
-  { value: 3, suffix: '+', label: 'Modul Materi' },
+  { value: 12, suffix: '+', label: 'Materi' },
   { value: 5, suffix: '', label: 'Pertemuan' },
   { value: 3, suffix: '+', label: 'Project Portfolio' },
   { value: 100, suffix: '%', label: 'Praktik Langsung' },
