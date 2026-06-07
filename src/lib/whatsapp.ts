@@ -2,7 +2,7 @@ import { WHATSAPP_NUMBER } from './constants';
 import type { RegistrationFormData } from '@/types/registration';
 
 export function buildWhatsAppMessage(data: RegistrationFormData): string {
-  let message = `Halo Admin StartDev 👋
+  let message = `Halo Admin DevStart
 
 Saya ingin mendaftar kelas ${data.course}.
 
