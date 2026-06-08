@@ -80,7 +80,7 @@ export default function RegistrationSection() {
         reset();
         setStatus('idle');
       }, 1500);
-    } catch (err: any) {
+    } catch (err) {
       console.error('Formspree submit error:', err);
       setStatus('error');
       setErrorMessage('Terjadi kendala server pendaftaran.');
