@@ -118,32 +118,49 @@ export const CURRICULUM = [
   { module: 12, title: 'Portfolio Preparation', description: 'Menyusun project menjadi portfolio profesional yang siap ditampilkan.', icon: 'Briefcase' },
 ] as const;
 
-export const PROJECT_SHOWCASES = [
+export interface ProjectShowcase {
+  readonly id: number;
+  readonly title: string;
+  readonly type: string;
+  readonly description: string;
+  readonly tech: readonly string[];
+  readonly gradient: string;
+  readonly image?: string;
+  readonly url?: string;
+}
+
+export const PROJECT_SHOWCASES: readonly ProjectShowcase[] = [
   {
     id: 1,
     title: 'Personal Portfolio',
     type: 'Portfolio Website',
-    description: 'Website portfolio developer pemula dengan desain modern dan responsif.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Website portfolio developer dengan desain modern dan responsif.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     gradient: 'linear-gradient(135deg, #01497c 0%, #2a6f97 50%, #468faf 100%)',
+    image: '/porto.png',
+    url: 'https://sulthandyno.netlify.app/',
   },
   {
     id: 2,
-    title: 'Product Landing Page',
-    type: 'Landing Page',
-    description: 'Landing page produk dengan desain responsif dan interaksi JavaScript.',
+    title: 'Image Compressor',
+    type: 'Web Tool',
+    description: 'Sistem Kompresi dan Manipulasi Image Berbasis Web-Native.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     gradient: 'linear-gradient(135deg, #014f86 0%, #2c7da0 50%, #61a5c2 100%)',
+    image: 'citrared.png',
+    url: 'https://citrared.netlify.app/',
   },
   {
     id: 3,
-    title: 'Simple Business Website',
-    type: 'Business Website',
-    description: 'Website sederhana untuk bisnis atau UMKM dengan tampilan profesional.',
+    title: 'Image Compressor',
+    type: 'Web Tool',
+    description: 'Kompresi gambar langsung di browser dengan resize, block averaging, dan bit depth reduction.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     gradient: 'linear-gradient(135deg, #013a63 0%, #01497c 50%, #2a6f97 100%)',
+    image: 'imgcom.png',
+    url: 'https://smart-image-compressor.netlify.app',
   },
-] as const;
+];
 
 export const OUTPUT_CHECKLIST = [
   'Struktur HTML semantic',
@@ -173,15 +190,6 @@ export const TARGET_STUDENTS = [
   { icon: 'Store', title: 'Pemilik Bisnis', description: 'Yang ingin memahami cara kerja website untuk bisnisnya.' },
   { icon: 'UserCircle', title: 'Portfolio Builder', description: 'Yang ingin memiliki portfolio digital profesional untuk menunjang karir.' },
 ] as const;
-
-export const INSTRUCTOR = {
-  name: 'Mentor DevStart',
-  position: 'Web Developer & Instructor',
-  experience: 'Berpengalaman dalam pengembangan web dan mengajar pemula untuk memahami coding dari dasar.',
-  focus: 'Fokus pada pengajaran yang praktis, terstruktur, dan berorientasi pada project nyata.',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
-} as const;
 
 export const SCHEDULE = {
   course: 'Website Zero to Hero',
