@@ -15,8 +15,13 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    const timer = setTimeout(() => {
+      handleScroll();
+    }, 0);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, [handleScroll]);
 
   /* active section observer */
@@ -65,7 +70,7 @@ export default function Navbar() {
         <a
           href="#beranda"
           onClick={(e) => { e.preventDefault(); scrollToSection('#beranda'); }}
-          className={`flex items-center gap-2 transition-all duration-500 ${
+          className={`flex items-center gap-1.5 transition-all duration-500 ${
             scrolled ? 'scale-95' : 'scale-100'
           }`}
         >
